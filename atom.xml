@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>吉良泽优的小站</title>
+  
+  
+  <link href="https://yukirasawa.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://yukirasawa.github.io/"/>
+  <updated>2023-02-09T01:17:58.741Z</updated>
+  <id>https://yukirasawa.github.io/</id>
+  
+  <author>
+    <name>吉良泽优</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://yukirasawa.github.io/2023/02/06/hello-world/"/>
+    <id>https://yukirasawa.github.io/2023/02/06/hello-world/</id>
+    <published>2023-02-06T08:18:42.851Z</published>
+    <updated>2023-02-09T01:17:58.741Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Hello</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
