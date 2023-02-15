@@ -6,7 +6,7 @@
   <link href="https://yukirasawa.github.io/atom.xml" rel="self"/>
   
   <link href="https://yukirasawa.github.io/"/>
-  <updated>2023-02-09T01:17:58.741Z</updated>
+  <updated>2023-02-15T12:34:48.173Z</updated>
   <id>https://yukirasawa.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>neovim 配置迁移记录</title>
+    <link href="https://yukirasawa.github.io/2023/02/15/neovim-%E9%85%8D%E7%BD%AE%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95/"/>
+    <id>https://yukirasawa.github.io/2023/02/15/neovim-%E9%85%8D%E7%BD%AE%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95/</id>
+    <published>2023-02-15T11:11:32.000Z</published>
+    <updated>2023-02-15T12:34:48.173Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;（上一次配 vim 还是上大学之前，转眼就快本科毕业了。）&lt;/p&gt;
+&lt;p&gt;这次主要是把一部分 &lt;code&gt;.vimrc&lt;/code&gt; 中的配置迁移到 neovim 的 lua 风格配置上，同时把一部分插件迁移到 neovim 的生态中。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

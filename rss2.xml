@@ -9,8 +9,33 @@
     <atom:link href="https://yukirasawa.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>摸鱼的地方</description>
-    <pubDate>Thu, 09 Feb 2023 01:17:58 GMT</pubDate>
+    <pubDate>Wed, 15 Feb 2023 12:34:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>neovim 配置迁移记录</title>
+      <link>https://yukirasawa.github.io/2023/02/15/neovim-%E9%85%8D%E7%BD%AE%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95/</link>
+      <guid>https://yukirasawa.github.io/2023/02/15/neovim-%E9%85%8D%E7%BD%AE%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95/</guid>
+      <pubDate>Wed, 15 Feb 2023 11:11:32 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;（上一次配 vim 还是上大学之前，转眼就快本科毕业了。）&lt;/p&gt;
+&lt;p&gt;这次主要是把一部分 &lt;code&gt;.vimrc&lt;/code&gt; 中的配置迁移到 neovim 的 lua 风格配置上，同时把一部分插件迁移到 neovim 的生态中。&lt;/p&gt;
+&lt;h2</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://yukirasawa.github.io/2023/02/15/neovim-%E9%85%8D%E7%BD%AE%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Hello World</title>
