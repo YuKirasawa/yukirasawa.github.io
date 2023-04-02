@@ -9,7 +9,7 @@
     <atom:link href="https://yukirasawa.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>摸鱼的地方</description>
-    <pubDate>Sun, 02 Apr 2023 13:19:46 GMT</pubDate>
+    <pubDate>Sun, 02 Apr 2023 14:05:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -22,8 +22,7 @@
         
           
           
-      <description>&lt;p&gt;众所周知，比特币网络以及其他使用 PoW 的区块链网络都通过挖矿保证网络的安全性。其原理大致就是通过算力的分散性实现区块产生能力的分散，从而避免网络被少数攻击者操纵。&lt;/p&gt;
-&lt;p&gt;进一步地，比特币网络使用的是基于双 SHA256 的碰撞的</description>
+      <description>&lt;h2 id=&quot;PoW&quot;&gt;&lt;a href=&quot;#PoW&quot; class=&quot;headerlink&quot; title=&quot;PoW&quot;&gt;&lt;/a&gt;PoW&lt;/h2&gt;&lt;p&gt;众所周知，比特币网络以及其他使用 PoW</description>
           
         
       
