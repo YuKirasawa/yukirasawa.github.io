@@ -6,7 +6,7 @@
   <link href="https://yukirasawa.github.io/atom.xml" rel="self"/>
   
   <link href="https://yukirasawa.github.io/"/>
-  <updated>2023-05-17T14:09:08.017Z</updated>
+  <updated>2023-10-16T01:36:12.927Z</updated>
   <id>https://yukirasawa.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows虚拟机踩坑</title>
+    <link href="https://yukirasawa.github.io/2023/10/16/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B8%A9%E5%9D%91/"/>
+    <id>https://yukirasawa.github.io/2023/10/16/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B8%A9%E5%9D%91/</id>
+    <published>2023-10-16T01:27:33.000Z</published>
+    <updated>2023-10-16T01:36:12.927Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在使用 virtualbox guest windows 安装 office 时，虚拟机会在安装程序启动时卡死。经过搜索找到了&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>C语言中弱符号真的存在吗</title>

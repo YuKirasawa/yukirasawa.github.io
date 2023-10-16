@@ -9,8 +9,31 @@
     <atom:link href="https://yukirasawa.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>摸鱼的地方</description>
-    <pubDate>Wed, 17 May 2023 14:09:08 GMT</pubDate>
+    <pubDate>Mon, 16 Oct 2023 01:36:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>windows虚拟机踩坑</title>
+      <link>https://yukirasawa.github.io/2023/10/16/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B8%A9%E5%9D%91/</link>
+      <guid>https://yukirasawa.github.io/2023/10/16/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B8%A9%E5%9D%91/</guid>
+      <pubDate>Mon, 16 Oct 2023 01:27:33 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;在使用 virtualbox guest windows 安装 office 时，虚拟机会在安装程序启动时卡死。经过搜索找到了&lt;a</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://yukirasawa.github.io/2023/10/16/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B8%A9%E5%9D%91/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>C语言中弱符号真的存在吗</title>

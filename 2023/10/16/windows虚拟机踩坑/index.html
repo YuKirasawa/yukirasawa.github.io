@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"yukirasawa.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="CS 本科大四学生 &amp; 研 1 打工人，体系结构方向萌新 主要使用 C++ 和 Python 退役 OIer &amp; *CPCer，会一点数论算法 摸鱼 CTFer，主要玩 Crypto 方向，也想学逆向和 PWN 远古时期的 PhOer 对一切保持好奇的无用灵魂">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="https://yukirasawa.github.io/about/index.html">
+  <meta name="description" content="在使用 virtualbox guest windows 安装 office 时，虚拟机会在安装程序启动时卡死。经过搜索找到了这篇讨论，其中指出 windows10 guest 需要打开虚拟机的 PAE&#x2F;NX 选项。经过尝试打开该选项之后就可以正常安装 office。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows虚拟机踩坑">
+<meta property="og:url" content="https://yukirasawa.github.io/2023/10/16/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B8%A9%E5%9D%91/index.html">
 <meta property="og:site_name" content="吉良泽优的小站">
-<meta property="og:description" content="CS 本科大四学生 &amp; 研 1 打工人，体系结构方向萌新 主要使用 C++ 和 Python 退役 OIer &amp; *CPCer，会一点数论算法 摸鱼 CTFer，主要玩 Crypto 方向，也想学逆向和 PWN 远古时期的 PhOer 对一切保持好奇的无用灵魂">
+<meta property="og:description" content="在使用 virtualbox guest windows 安装 office 时，虚拟机会在安装程序启动时卡死。经过搜索找到了这篇讨论，其中指出 windows10 guest 需要打开虚拟机的 PAE&#x2F;NX 选项。经过尝试打开该选项之后就可以正常安装 office。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-16T01:38:29.441Z">
-<meta property="article:modified_time" content="2023-10-16T01:38:29.441Z">
+<meta property="article:published_time" content="2023-10-16T01:27:33.000Z">
+<meta property="article:modified_time" content="2023-10-16T01:36:12.927Z">
 <meta property="article:author" content="吉良泽优">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://yukirasawa.github.io/about/">
+<link rel="canonical" href="https://yukirasawa.github.io/2023/10/16/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B8%A9%E5%9D%91/">
 
 
 <script id="page-configurations">
@@ -40,13 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>关于我 | 吉良泽优的小站
-</title>
+  <title>windows虚拟机踩坑 | 吉良泽优的小站</title>
   
 
 
@@ -150,51 +149,80 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yukirasawa.github.io/2023/10/16/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B8%A9%E5%9D%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="吉良泽优">
+      <meta itemprop="description" content="摸鱼的地方">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吉良泽优的小站">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          windows虚拟机踩坑
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">关于我
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2023-10-16 09:27:33 / 修改时间：09:36:12" itemprop="dateCreated datePublished" datetime="2023-10-16T09:27:33+08:00">2023-10-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>在使用 virtualbox guest windows 安装 office 时，虚拟机会在安装程序启动时卡死。经过搜索找到了<a target="_blank" rel="noopener" href="https://forums.virtualbox.org/viewtopic.php?t=96533">这篇讨论</a>，其中指出 windows10 guest 需要打开虚拟机的 PAE&#x2F;NX 选项。经过尝试打开该选项之后就可以正常安装 office。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/17/C%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%BC%B1%E7%AC%A6%E5%8F%B7%E7%9C%9F%E7%9A%84%E5%AD%98%E5%9C%A8%E5%90%97/" rel="prev" title="C语言中弱符号真的存在吗">
+      <i class="fa fa-chevron-left"></i> C语言中弱符号真的存在吗
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <ul>
-<li><del>CS 本科大四学生 &amp; </del>研 1 打工人，体系结构方向萌新</li>
-<li>主要使用 C++ 和 Python</li>
-<li>退役 OIer &amp; *CPCer，会一点数论算法</li>
-<li>摸鱼 CTFer，主要玩 Crypto 方向，也想学逆向和 PWN</li>
-<li>远古时期的 PhOer</li>
-<li>对一切保持好奇的无用灵魂</li>
-</ul>
-
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
