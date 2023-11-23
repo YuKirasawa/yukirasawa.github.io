@@ -9,8 +9,31 @@
     <atom:link href="https://yukirasawa.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>摸鱼的地方</description>
-    <pubDate>Mon, 16 Oct 2023 01:36:12 GMT</pubDate>
+    <pubDate>Thu, 23 Nov 2023 01:18:42 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>tui杂记</title>
+      <link>https://yukirasawa.github.io/2023/11/23/tui%E6%9D%82%E8%AE%B0/</link>
+      <guid>https://yukirasawa.github.io/2023/11/23/tui%E6%9D%82%E8%AE%B0/</guid>
+      <pubDate>Thu, 23 Nov 2023 01:14:44 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;isatty&quot;&gt;&lt;a href=&quot;#isatty&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://yukirasawa.github.io/2023/11/23/tui%E6%9D%82%E8%AE%B0/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>windows虚拟机踩坑</title>

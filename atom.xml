@@ -6,7 +6,7 @@
   <link href="https://yukirasawa.github.io/atom.xml" rel="self"/>
   
   <link href="https://yukirasawa.github.io/"/>
-  <updated>2023-10-16T01:36:12.927Z</updated>
+  <updated>2023-11-23T01:18:42.541Z</updated>
   <id>https://yukirasawa.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tui杂记</title>
+    <link href="https://yukirasawa.github.io/2023/11/23/tui%E6%9D%82%E8%AE%B0/"/>
+    <id>https://yukirasawa.github.io/2023/11/23/tui%E6%9D%82%E8%AE%B0/</id>
+    <published>2023-11-23T01:14:44.000Z</published>
+    <updated>2023-11-23T01:18:42.541Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;isatty&quot;&gt;&lt;a href=&quot;#isatty&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>windows虚拟机踩坑</title>
