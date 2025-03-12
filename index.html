@@ -154,6 +154,80 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yukirasawa.github.io/2025/03/12/%E8%AE%B0%E4%B8%80%E6%AC%A1ubuntu-apt%E5%8C%85%E7%AE%A1%E7%90%86%E4%BF%AE%E5%A4%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="吉良泽优">
+      <meta itemprop="description" content="摸鱼的地方">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吉良泽优的小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/03/12/%E8%AE%B0%E4%B8%80%E6%AC%A1ubuntu-apt%E5%8C%85%E7%AE%A1%E7%90%86%E4%BF%AE%E5%A4%8D/" class="post-title-link" itemprop="url">记一次ubuntu apt包管理修复</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-03-12 19:24:07 / 修改时间：20:03:26" itemprop="dateCreated datePublished" datetime="2025-03-12T19:24:07+08:00">2025-03-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p> 起因是有同学求助在公用服务器上执行 <code>apt install</code> 时出现了依赖报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">The following packages have unmet dependencies:</span><br><span class="line"> libnss-systemd : Depends: systemd (= 245.4-4ubuntu3.24)</span><br><span class="line"> libpam-systemd : Depends: systemd (= 245.4-4ubuntu3.24)</span><br><span class="line"> systemd : Depends: libsystemd0 (= 245.4-4ubuntu3.23) but 245.4-4ubuntu3.24 is installed</span><br><span class="line"> systemd-sysv : Depends: systemd (= 245.4-4ubuntu3.24)</span><br><span class="line"> systemd-timesyncd : Depends: systemd (= 245.4-4ubuntu3.24)</span><br></pre></td></tr></table></figure>
+
+<p>如果尝试 <code>sudo apt --fix-broken install</code> 修复则会报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Preparing to unpack .../systemd_245.4-4ubuntu3.24_amd64.deb ...</span><br><span class="line">Unpacking systemd (245.4-4ubuntu3.24) over (245.4-4ubuntu3.23) ...</span><br><span class="line">dpkg: error processing archive /var/cache/apt/archives/systemd_245.4-4ubuntu3.24_amd64.deb (--unpack):</span><br><span class="line"> unable to make backup link of &#x27;./bin/systemctl&#x27; before installing new version: Operation not permitted</span><br><span class="line">dpkg-deb: error: paste subprocess was killed by signal (Broken pipe)</span><br><span class="line">Errors were encountered while processing:</span><br><span class="line"> /var/cache/apt/archives/systemd_245.4-4ubuntu3.24_amd64.deb</span><br></pre></td></tr></table></figure>
+
+<p>其实看到这个报错就应该去检查 <code>./bin/systemctl</code> 的权限问题，但是当时大意了没仔细看，在检查 apt 的包依赖上浪费了很多时间。</p>
+<p>后来经过检查，怀疑是这个文件的 inode flags 的权限配置出错。但是 <code>chattr</code> 执行时报错 <code>Usage: vmlinux1 [-pRVf] [-+=aAcCdDeijPsStTuF] [-v version] files...</code>。于是尝试先安装 e2fsprogs，但又发现 e2fsprogs 已经安装过且提示 <code>chattr</code> 同样修改权限不足。</p>
+<p>这样就只能从 deb 包里解压出 <code>chattr</code> 可执行文件执行。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ./bin/chattr -a -i /bin/systemctl</span><br><span class="line">sudo ./bin/chattr -a -i /bin/chattr</span><br></pre></td></tr></table></figure>
+
+<p>再执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt --fix-broken install</span><br></pre></td></tr></table></figure>
+
+<p>就可以正常执行了。</p>
+<p>PS: 这个服务器之前中过好几次病毒，虽然没有造成恶劣影响但是很多系统文件都被破坏了。早该重装算了（</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://yukirasawa.github.io/2023/11/23/tui%E6%9D%82%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -635,7 +709,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -663,7 +737,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

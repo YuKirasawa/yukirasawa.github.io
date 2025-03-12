@@ -9,8 +9,32 @@
     <atom:link href="https://yukirasawa.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>摸鱼的地方</description>
-    <pubDate>Thu, 23 Nov 2023 01:18:42 GMT</pubDate>
+    <pubDate>Wed, 12 Mar 2025 12:03:26 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>记一次ubuntu apt包管理修复</title>
+      <link>https://yukirasawa.github.io/2025/03/12/%E8%AE%B0%E4%B8%80%E6%AC%A1ubuntu-apt%E5%8C%85%E7%AE%A1%E7%90%86%E4%BF%AE%E5%A4%8D/</link>
+      <guid>https://yukirasawa.github.io/2025/03/12/%E8%AE%B0%E4%B8%80%E6%AC%A1ubuntu-apt%E5%8C%85%E7%AE%A1%E7%90%86%E4%BF%AE%E5%A4%8D/</guid>
+      <pubDate>Wed, 12 Mar 2025 11:24:07 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt; 起因是有同学求助在公用服务器上执行 &lt;code&gt;apt install&lt;/code&gt; 时出现了依赖报错&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://yukirasawa.github.io/2025/03/12/%E8%AE%B0%E4%B8%80%E6%AC%A1ubuntu-apt%E5%8C%85%E7%AE%A1%E7%90%86%E4%BF%AE%E5%A4%8D/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>tui杂记</title>

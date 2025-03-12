@@ -6,7 +6,7 @@
   <link href="https://yukirasawa.github.io/atom.xml" rel="self"/>
   
   <link href="https://yukirasawa.github.io/"/>
-  <updated>2023-11-23T01:18:42.541Z</updated>
+  <updated>2025-03-12T12:03:26.424Z</updated>
   <id>https://yukirasawa.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次ubuntu apt包管理修复</title>
+    <link href="https://yukirasawa.github.io/2025/03/12/%E8%AE%B0%E4%B8%80%E6%AC%A1ubuntu-apt%E5%8C%85%E7%AE%A1%E7%90%86%E4%BF%AE%E5%A4%8D/"/>
+    <id>https://yukirasawa.github.io/2025/03/12/%E8%AE%B0%E4%B8%80%E6%AC%A1ubuntu-apt%E5%8C%85%E7%AE%A1%E7%90%86%E4%BF%AE%E5%A4%8D/</id>
+    <published>2025-03-12T11:24:07.000Z</published>
+    <updated>2025-03-12T12:03:26.424Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 起因是有同学求助在公用服务器上执行 &lt;code&gt;apt install&lt;/code&gt; 时出现了依赖报错&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>tui杂记</title>
