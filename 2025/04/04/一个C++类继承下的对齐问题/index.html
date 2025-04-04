@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"yukirasawa.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="isatty在终端中，许多程序会将输出进行配色等的美化。但当输出被重定向到文件中时，我们肯定不希望这些控制字符被写入文件。所以一些程序会使用 isatty 判断当前得标准输出是不是连接到了终端上，从而自动使用合理的输出方式。 一个 python 的 demo 如下 1234567import osimport sysif os.isatty(sys.stdout.fileno()):    pri">
+  <meta name="description" content="有同学分享了一道面试题，解释下面代码的结果。 12345678910111213141516171819202122232425262728#include &lt;iostream&gt;class A &amp;#123;    int a;    char c;&amp;#125;;class AA : A &amp;#123;    char cc;&amp;#125;;class B &amp;#123;public:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tui杂记">
-<meta property="og:url" content="https://yukirasawa.github.io/2023/11/23/tui%E6%9D%82%E8%AE%B0/index.html">
+<meta property="og:title" content="一个C++类继承下的对齐问题">
+<meta property="og:url" content="https://yukirasawa.github.io/2025/04/04/%E4%B8%80%E4%B8%AAC++%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%8B%E7%9A%84%E5%AF%B9%E9%BD%90%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="吉良泽优的小站">
-<meta property="og:description" content="isatty在终端中，许多程序会将输出进行配色等的美化。但当输出被重定向到文件中时，我们肯定不希望这些控制字符被写入文件。所以一些程序会使用 isatty 判断当前得标准输出是不是连接到了终端上，从而自动使用合理的输出方式。 一个 python 的 demo 如下 1234567import osimport sysif os.isatty(sys.stdout.fileno()):    pri">
+<meta property="og:description" content="有同学分享了一道面试题，解释下面代码的结果。 12345678910111213141516171819202122232425262728#include &lt;iostream&gt;class A &amp;#123;    int a;    char c;&amp;#125;;class AA : A &amp;#123;    char cc;&amp;#125;;class B &amp;#123;public:">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-23T01:14:44.000Z">
-<meta property="article:modified_time" content="2023-11-23T01:18:42.541Z">
+<meta property="article:published_time" content="2025-04-04T13:53:26.000Z">
+<meta property="article:modified_time" content="2025-04-04T14:36:26.310Z">
 <meta property="article:author" content="吉良泽优">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://yukirasawa.github.io/2023/11/23/tui%E6%9D%82%E8%AE%B0/">
+<link rel="canonical" href="https://yukirasawa.github.io/2025/04/04/%E4%B8%80%E4%B8%AAC++%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%8B%E7%9A%84%E5%AF%B9%E9%BD%90%E9%97%AE%E9%A2%98/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>tui杂记 | 吉良泽优的小站</title>
+  <title>一个C++类继承下的对齐问题 | 吉良泽优的小站</title>
   
 
 
@@ -157,7 +157,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yukirasawa.github.io/2023/11/23/tui%E6%9D%82%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://yukirasawa.github.io/2025/04/04/%E4%B8%80%E4%B8%AAC++%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%8B%E7%9A%84%E5%AF%B9%E9%BD%90%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -170,7 +170,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          tui杂记
+          一个C++类继承下的对齐问题
         </h1>
 
         <div class="post-meta">
@@ -181,7 +181,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-11-23 09:14:44 / 修改时间：09:18:42" itemprop="dateCreated datePublished" datetime="2023-11-23T09:14:44+08:00">2023-11-23</time>
+              <time title="创建时间：2025-04-04 21:53:26 / 修改时间：22:36:26" itemprop="dateCreated datePublished" datetime="2025-04-04T21:53:26+08:00">2025-04-04</time>
             </span>
 
           
@@ -195,12 +195,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="isatty"><a href="#isatty" class="headerlink" title="isatty"></a>isatty</h2><p>在终端中，许多程序会将输出进行配色等的美化。但当输出被重定向到文件中时，我们肯定不希望这些控制字符被写入文件。所以一些程序会使用 <code>isatty</code> 判断当前得标准输出是不是连接到了终端上，从而自动使用合理的输出方式。</p>
-<p>一个 python 的 demo 如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> os.isatty(sys.stdout.fileno()):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;tty find&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;No tty&quot;</span>)</span><br></pre></td></tr></table></figure>
+        <p>有同学分享了一道面试题，解释下面代码的结果。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AA</span> : A &#123;</span><br><span class="line">    <span class="type">char</span> cc;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BB</span> : B &#123;</span><br><span class="line">    <span class="type">char</span> cc;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">sizeof</span>(A) &lt;&lt; std::endl;  <span class="comment">// 8</span></span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">sizeof</span>(AA) &lt;&lt; std::endl; <span class="comment">// 8</span></span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">sizeof</span>(B) &lt;&lt; std::endl;  <span class="comment">// 8</span></span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">sizeof</span>(BB) &lt;&lt; std::endl; <span class="comment">// 12</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>当标准输出在终端中且没有重定向时，会输出 <code>tty find</code>，否则输出 <code>No tty</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">➜ python tty_test.py               </span><br><span class="line">tty find</span><br><span class="line">➜ python tty_test.py | cat</span><br><span class="line">No tty</span><br></pre></td></tr></table></figure>
+<p>第一眼看好像确实有点奇怪，public 还会改变类的对齐方式吗？在知乎上搜到了一个<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/408645567">类似的问题</a>，其中<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/408645567/answer/1357781218">一个回答</a>解释了基类是 POD（Plain Old Data）会使子类中的相应位置的 tail padding 不生效。但在我的记忆中，上面的 <code>A</code> 和 <code>B</code> 似乎都是 POD。查了 <a target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/language/classes#POD_class">cppreference</a>也没发现问题。于是又进入了垃圾时间。检查了很多其他的类的特性都没发现 <code>A</code> 和 <code>B</code> 有区别。</p>
+<p>最后发现 GCC 用的 <a target="_blank" rel="noopener" href="https://itanium-cxx-abi.github.io/cxx-abi/abi.html#POD">abi 规范</a>使用的 2003 版的 ISO C++ 标准，而这个版本里确实只有全非静态成员变量都是 public 的 <code>B</code> 是 POD，而 <code>A</code> 不是。</p>
+<p>同时也可以发现如果尝试使用 <code>memcpy</code> 等直接操作内存的函数从 <code>AA</code> 到 <code>A</code> 复制数据，也确实会触发警告，说明编译器确实不对这种情况的内存布局做保证。而 <code>B</code> 没有这种警告。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">警告：‘void* memcpy(void*, const void*, size_t)’ copying an object of type ‘class A’ with ‘private’ member ‘A::a’ from an array of ‘class AA’; use assignment or copy-initialization instead [-Wclass-memaccess]</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -217,13 +218,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/10/16/windows%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%B8%A9%E5%9D%91/" rel="prev" title="windows虚拟机踩坑">
-      <i class="fa fa-chevron-left"></i> windows虚拟机踩坑
+    <a href="/2025/03/12/%E8%AE%B0%E4%B8%80%E6%AC%A1ubuntu-apt%E5%8C%85%E7%AE%A1%E7%90%86%E4%BF%AE%E5%A4%8D/" rel="prev" title="记一次ubuntu apt包管理修复">
+      <i class="fa fa-chevron-left"></i> 记一次ubuntu apt包管理修复
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2025/03/12/%E8%AE%B0%E4%B8%80%E6%AC%A1ubuntu-apt%E5%8C%85%E7%AE%A1%E7%90%86%E4%BF%AE%E5%A4%8D/" rel="next" title="记一次ubuntu apt包管理修复">
-      记一次ubuntu apt包管理修复 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -282,7 +280,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#isatty"><span class="nav-number">1.</span> <span class="nav-text">isatty</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

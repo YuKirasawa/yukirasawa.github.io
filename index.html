@@ -154,6 +154,72 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yukirasawa.github.io/2025/04/04/%E4%B8%80%E4%B8%AAC++%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%8B%E7%9A%84%E5%AF%B9%E9%BD%90%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="吉良泽优">
+      <meta itemprop="description" content="摸鱼的地方">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吉良泽优的小站">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/04/04/%E4%B8%80%E4%B8%AAC++%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%8B%E7%9A%84%E5%AF%B9%E9%BD%90%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">一个C++类继承下的对齐问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-04-04 21:53:26 / 修改时间：22:36:26" itemprop="dateCreated datePublished" datetime="2025-04-04T21:53:26+08:00">2025-04-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>有同学分享了一道面试题，解释下面代码的结果。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AA</span> : A &#123;</span><br><span class="line">    <span class="type">char</span> cc;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BB</span> : B &#123;</span><br><span class="line">    <span class="type">char</span> cc;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">sizeof</span>(A) &lt;&lt; std::endl;  <span class="comment">// 8</span></span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">sizeof</span>(AA) &lt;&lt; std::endl; <span class="comment">// 8</span></span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">sizeof</span>(B) &lt;&lt; std::endl;  <span class="comment">// 8</span></span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">sizeof</span>(BB) &lt;&lt; std::endl; <span class="comment">// 12</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第一眼看好像确实有点奇怪，public 还会改变类的对齐方式吗？在知乎上搜到了一个<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/408645567">类似的问题</a>，其中<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/408645567/answer/1357781218">一个回答</a>解释了基类是 POD（Plain Old Data）会使子类中的相应位置的 tail padding 不生效。但在我的记忆中，上面的 <code>A</code> 和 <code>B</code> 似乎都是 POD。查了 <a target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/language/classes#POD_class">cppreference</a>也没发现问题。于是又进入了垃圾时间。检查了很多其他的类的特性都没发现 <code>A</code> 和 <code>B</code> 有区别。</p>
+<p>最后发现 GCC 用的 <a target="_blank" rel="noopener" href="https://itanium-cxx-abi.github.io/cxx-abi/abi.html#POD">abi 规范</a>使用的 2003 版的 ISO C++ 标准，而这个版本里确实只有全非静态成员变量都是 public 的 <code>B</code> 是 POD，而 <code>A</code> 不是。</p>
+<p>同时也可以发现如果尝试使用 <code>memcpy</code> 等直接操作内存的函数从 <code>AA</code> 到 <code>A</code> 复制数据，也确实会触发警告，说明编译器确实不对这种情况的内存布局做保证。而 <code>B</code> 没有这种警告。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">警告：‘void* memcpy(void*, const void*, size_t)’ copying an object of type ‘class A’ with ‘private’ member ‘A::a’ from an array of ‘class AA’; use assignment or copy-initialization instead [-Wclass-memaccess]</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://yukirasawa.github.io/2025/03/12/%E8%AE%B0%E4%B8%80%E6%AC%A1ubuntu-apt%E5%8C%85%E7%AE%A1%E7%90%86%E4%BF%AE%E5%A4%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -709,7 +775,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
